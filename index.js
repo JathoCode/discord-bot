@@ -11,7 +11,12 @@ bot.on('ready', () =>{
   bot.user.setActivity('Prefix ;')
 })
 
-
+//Standaard ping-pong bericht
+bot.on('message', message => {
+    if (message.content === 'ping') {
+        message.channel.send('pong');
+    }
+})
 
 bot.login(token);
 
