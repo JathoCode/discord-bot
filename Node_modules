@@ -3,5 +3,6 @@ Node modules need to be installed seperatly
 steps:
 1. Open CMD
 2. enter "cd " + the location of bot
-3. enter "npm install discord.js --save"
-4. Node modules folder and package-lock.json should now be created
+3. enter "npm init" to create the package.json file
+4. enter "npm install discord.js --save"
+5. node_modules folder and package-lock.json should now be created
