@@ -13,3 +13,6 @@ bot.on('ready', () =>{
 
 
 bot.login(token);
+
+//Invite link:
+//https://discord.com/api/oauth2/authorize?client_id=755787399468023858&permissions=0&scope=bot
