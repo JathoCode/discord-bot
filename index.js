@@ -10,3 +10,6 @@ bot.on('ready', () =>{
   bot.user.setStatus('available')
   bot.user.setActivity('Prefix ;')
 })
+
+
+bot.login(token);
