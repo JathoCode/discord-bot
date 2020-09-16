@@ -12,6 +12,7 @@ bot.on('ready', () =>{
 })
 
 
+
 bot.login(token);
 
 //Invite link:
