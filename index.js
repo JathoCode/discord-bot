@@ -15,7 +15,6 @@ bot.on('ready', () =>{
 bot.on('message', message => {
     if (message.content === 'ping') {
         message.channel.send('pong');
-        message.channel.send(new Date().getTime() - msg.createdTimestamp + " ms")
     }
 })
 
