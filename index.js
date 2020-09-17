@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
-
+//De token kan niet op GitHub ivm 'privacy'
 const token = 'TOKEN';
 
 const PREFIX = ';';
