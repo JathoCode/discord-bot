@@ -8,7 +8,6 @@ Only brrrrr
 3. Cd into the folder using the command prompt and follow the Node_modules guide to install the packages
 4. Download the files from this repository and place them in the folder
 5. Change the bot token to your bot token (find it on discord.com/developers/applications)
-6. A Open the command prompt in the folder which the bot is located in and type "node index.js"
-6. B Double click "run.bat"
+6. Double click "run.bat" OR Open the command prompt in the folder which the bot is located in and type "node index.js"
 7. The bot should go online now
 - If not, run for your life
