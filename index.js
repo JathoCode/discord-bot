@@ -11,11 +11,40 @@ bot.on('ready', () =>{
   bot.user.setActivity('Prefix ;')
 })
 
-//Standaard ping-pong bericht
+// T is nu al een zooitje, maar ik maak hier n tijdelijke verzamelplek voor de embeds :)
+const helpEmbed1 = new Discord.MessageEmbed()
+.setColor('#ff8000')
+.setTitle('SprintJoekels Commands')
+.addFields(
+ 	{ name: `${PREFIX}help`, value: 'Displays this message, duh.' },
+ 	{ name: `${PREFIX}ping`, value: 'Play a game of Ping-Pong' }
+)
+.setFooter('Showing page 1/1')
+
+// Dit moet lijken op een command handler ofzo, bij een fout command stuurt ie 'Unknown command' terug
+// Vond ik wel grappig
 bot.on('message', message => {
-    if (message.content === 'ping') {
-        message.channel.send('pong');
+	if (!message.content.startsWith(PREFIX) || message.author.bot) return;
+
+ 	const args = message.content.slice(PREFIX.length).trim().split(/ +/);
+ 	const command = args.shift().toLowerCase();
+ 	const sayMessage = args.join(' ');
+ 	const ping = Date.now() - message.createdTimestamp + ' ms';
+
+ 	if (command === 'ping') {
+   	message.channel.send(`Pong! (${ping})`);
+ 	}
+ 	else if (command === 'help') {
+  	message.channel.send(helpEmbed1);
+ 	}
+	else if (command === 'say') {
+   	message.channel.bulkDelete(1)
+  	message.channel.send(sayMessage)
     }
+	// Gewoon hieronder wat andere commandjes toevoegen
+	else {
+   	message.channel.send('Unknown command')
+ 	}
 })
 
 bot.login(token);
