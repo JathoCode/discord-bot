@@ -8,7 +8,7 @@ const PREFIX = ';';
 bot.on('ready', () =>{
   console.log('This bot is online');
   bot.user.setStatus('available')
-  bot.user.setActivity('Prefix ;')
+  bot.user.setActivity(PREFIX)
 })
 
 // T is nu al een zooitje, maar ik maak hier n tijdelijke verzamelplek voor de embeds :)
