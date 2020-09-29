@@ -48,7 +48,7 @@ bot.on('message', message => {
 	}
 	// Gewoon hieronder wat andere commandjes toevoegen
 	else {
-   	message.channel.send('Unknown command')
+   	message.channel.send(`Error: Unknown command. Type '${PREFIX}help' to view a list of all commands.`)
  	}
 })
 
